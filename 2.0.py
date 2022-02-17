@@ -4,7 +4,7 @@
 class Afins():
     def __init__(self):
         #####################Словари можно изменять только содержимое в скобках#######################
-        self.ukraine_lang = "абвгдеєжзиіїйклмнопрстуфхцчшщьюя0123456789"
+        self.ukraine_lang = "абвгgдеєжзиіїйклмнопрстуфхцчшщьюя0123456789"
         self.english_lang = "abcdefgjklmnopqrstuvwxyz0123456789"
         self.arr_uk = self.ukraine_lang.split(' ')
         self.arr_en = self.english_lang.split(' ')
