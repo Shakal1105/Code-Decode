@@ -802,36 +802,3 @@ class triple_des(_baseDes):
             data = self.__key1.crypt(data, DECRYPT)
         return self._unpadData(data, pad, padmode)
 ################################PROGRAM######################
-KEY =input('Key: ')
-
-
-def des_encrypt(s):
-    """
-         Шифрование DES
-         : param s: необработанная строка
-         : return: зашифрованная строка, hex
-    """
-    secret_key = KEY
-    iv = secret_key
-    k = des(secret_key, CBC, iv, pad=None, padmode=PAD_PKCS5)
-    en = k.encrypt(s, padmode=PAD_PKCS5)
-    print(binascii.b2a_hex(en))
-
-
-def des_descrypt(s):
-    """
-         Дешифрование DES
-         : param s: зашифрованная строка, hex
-         : return: расшифрованная строка
-    """
-    secret_key = KEY
-    iv = secret_key
-    k = des(secret_key, CBC, iv, pad=None, padmode=PAD_PKCS5)
-    de = k.decrypt(binascii.a2b_hex(s), padmode=PAD_PKCS5)
-    print(de)
-
-slovo = input("text : ")
-
-des_encrypt(slovo)
-
-des_descrypt(slovo)
